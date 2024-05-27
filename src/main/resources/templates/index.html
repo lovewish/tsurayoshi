@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>オフィスカジュアル</title>
+<meta charset="utf-8" />
+</head>
+<body>
+	<h1 th:text="${message}"></h1>
+	<a href="../templates/form.html" th:href="@{/form}">コーデ生成へ</a>
+	<h1 th:text="${message}"></h1>
+	<a href="../templates/body.html" th:href="@{/body}">先輩社員のコーデ</a>
+</body>
+</html>
