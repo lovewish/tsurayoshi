@@ -5,10 +5,23 @@
 
 .image-list li {
     display: inline-block; /* 要素を横並びにする */
-    margin: 0 10px; /* 画像間の間隔を調整 */
+    margin: 70px 50px 70px 50px; /* 画像間の間隔を調整 */
 }
 
 .image-list img {
-    max-width: 100px; /* 画像の最大幅を指定 */
+    width: 250px; 
     height: auto; /* アスペクト比を維持 */
+}
+
+ul {
+  column-count: 3;        /* 列数を3列に指定 */
+  border-style: groove;
+  background-color: antiquewhite;
+}
+
+h1{
+	text-align: center;
+	font-size: 40px;
+	background-color: aliceblue;
+	font-family: "游ゴシック";
 }
