@@ -7,11 +7,12 @@ public class ChatController {
 
 	@RequestMapping
 	public String sample1(Model model) {
+		//model.addAttribute("title","オフィスカジュアル");
 		return "index";
 	}
 	
 	@RequestMapping("/body")
-	public String sample2 (Model model){
+	public String sample2(Model model){
 		return "body";
 	}
 }
