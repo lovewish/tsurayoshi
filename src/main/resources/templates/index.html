@@ -5,9 +5,48 @@
 <meta charset="utf-8" />
 </head>
 <body>
-	<h1 th:text="${message}"></h1>
-	<a href="../templates/random.html" th:href="@{/random}">コーデ生成へ</a>
-	<h1 th:text="${message}"></h1>
-	<a href="../templates/body.html" th:href="@{/body}">先輩社員のコーデ</a>
+	
+	<header>
+		<div id="headerInner">
+		<div id="logo"><img th:src="@{1716858845604epb34ku4.png}" width="100px" alt="Hukuyoshi"></div>
+		</div>
+
+	</header>
+	
+	<main>
+		<h1 id="mainPhoto"><img th:src="@{main画像.jpg}" width="1000px"></h1>
+		
+		<h2 th:text="${message}"></h2>
+			<a href="../templates/random.html" th:href="@{/random}"><img th:src="コーデ生成.jpg" width="300" alt="コード生成"></a>
+			<h2 th:text="${message}"></h2>
+		    <a href="../templates/body.html" th:href="@{/body}"><img th:src="先輩社員のコーデ.png" width="300" alt="先輩社員のコーデ"/></a>
+		
+		<!--<ul class="image-list">
+			<li class="image-list-item">
+		   <li><a href="../templates/form.html" th:href="@{/form}"><img th:src="コーデ生成.jpg" width="300" alt="コード生成"></a></li>
+		   <li><a href="../templates/body.html" th:href="@{/body}"><img th:src="先輩社員のコーデ.png" width="300" alt="先輩社員のコーデ"/></a></li>
+		</ul>-->
+	</main>	
+			
+<!--    <h1>オフィスカジュアル</h1>
+	<h2 th:text="${message}"></h2>
+	<a href=>コーデ生成へ</a>
+	<h2 th:text="${message}"></h2>
+    <a href="../templates/body.html" th:href="@{/body}">先輩社員のコーデ</a>-->
+	
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
