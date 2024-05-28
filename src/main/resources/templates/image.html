@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload and Display Image</title>
+</head>
+<body>
+
+<h2>Upload Image</h2>
+<form method="post" action="/upload" enctype="multipart/form-data">
+    <input type="file" name="file"><br><br>
+    <input type="submit" value="Upload">
+</form>
+
+<h2>Upload Image2</h2>
+<form method="post" action="/upload" enctype="multipart/form-data">
+    <input type="file" name="file"><br><br>
+    <input type="submit" value="Upload">
+</form>
+
+
+<p th:text="${message}"></p>
+
+
+<a th:href="@{/random}">ランダムへ</a>
+
+</body>
+</html>
