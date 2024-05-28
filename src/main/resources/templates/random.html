@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ランダム画像表示</title>
+</head>
+<body>
+	
+	<!-- ボタンを追加 -->
+	<button onclick="showRandomImage()">ランダム表示ボタン</button>
+	
+	<!-- ランダムな画像を表示する場所 -->
+	<div id="randomImageContainer"></div>
+	
+	<script>
+	    // ランダムな画像を表示する関数
+	    function showRandomImage() {
+	        fetch("/random-image")
+	            .then(response => response.text())
+	            .then(imageUrl => {
+	                document.getElementById("randomImageContainer").innerHTML = `
+	                    <h2>Random Image</h2>
+	                    <img src="${imageUrl}" width="400" height="300">
+	                `;
+	            })
+	            .catch(error => console.error('Error fetching random image:', error));
+	    }
+	</script>
+</body>
+</html>
