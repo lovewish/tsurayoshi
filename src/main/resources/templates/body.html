@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-	<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
-	
-	</head>
-	<body>
-		<h1>先輩社員のコーディネート一覧</h1>
-		<ul class="image-list">
-		   <!-- 画像リストアイテム -->
-		   <li class="image-list-item"><img src="人事1.jpg" alt="Image 1"></li>
-		   		   <li class="image-list-item"><img src="人事2.jpg" alt="Image 2"></li>
-		   		   <li class="image-list-item"><img src="人事3.jpg" alt="Image 3"></li>
-		   		   <li class="image-list-item"><img src="人事4.jpg" alt="Image 4"></li>
-		   		   <li class="image-list-item"><img src="人事5.jpg" alt="Image 5"></li>
-		   		   <li class="image-list-item"><img src="人事6.jpg" alt="Image 6"></li>
-				   <li class="image-list-item"><img src="メンター1.jpg" alt="Image 7"></li>
-				   <li class="image-list-item"><img src="メンター2.jpg" alt="Image 8"></li>
-				   <li class="image-list-item"><img src="メンター3.jpg" alt="Image 9"></li>
-				   <li class="image-list-item"><img src="メンター4.jpg" alt="Image 10"></li>
-		   <!-- 他の画像を追加する場合は同様に追加 -->
-		</ul>
-	</body>
-	</html>
-		
-		
-		
-		
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服装一覧</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>服装一覧</h1>
 
+<div class="filters">
+    <form action="/male" method="get">
+        <button type="submit" name="gender" value="male">男性</button>
+    </form>
+    <form action="/female" method="get">
+        <button type="submit" name="gender" value="female">女性</button>
+    </form>
+    <form action="/all" method="get">
+        <button type="submit">すべて表示</button>
+    </form>
+</div>
+
+<div class="gallery">
+    <div class="item" th:each="clothing : ${clothingList}" th:class="${clothing.gender}">
+        <img th:src="@{/images/__${clothing.imageUrl}__}" alt="Clothing Image">
+    </div>
+</div>
+</body>
+</html>

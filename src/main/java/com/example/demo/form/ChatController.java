@@ -7,6 +7,7 @@ import java.util.Random;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,16 +17,15 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 public class ChatController {
 
-	@RequestMapping
-	public String sample1(Model model) {
-		//model.addAttribute("title","オフィスカジュアル");
-		return "index";
-	}
-	
-	@RequestMapping("/body")
-	public String sample2(Model model){
-		return "body";
-	}
+	@GetMapping("/")
+    public String sample1(Model model) {
+        return "index";
+    }
+    
+    @GetMapping("/body")
+    public String sample2 (Model model){
+        return "body";
+    }
 	
     @RequestMapping("/random-image")
     @ResponseBody
@@ -84,6 +84,21 @@ public class ChatController {
         // image.htmlを描画
         return "image";
         
+    }
+    //吉田の追加
+    @GetMapping("/male")
+    public String showMalePage() {
+        return "male"; // male.htmlに対応するテンプレート名を返す
+    }
+
+    @GetMapping("/female")
+    public String showFemalePage() {
+        return "female"; // female.htmlに対応するテンプレート名を返す
+    }
+
+    @GetMapping("/all")
+    public String showAllPage() {
+        return "all"; // all.htmlに対応するテンプレート名を返す
     }
     
 }

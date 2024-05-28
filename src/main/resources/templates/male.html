@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{css/style.css}">
+</head>
+<body>
+    <h1>男性社員のコーディネート一覧</h1>
+
+    <ul class="image-list">
+        <!--画像リストアイテム--> 
+    
+        <li class="image-list-item"><img th:src="@{static/images/メンター8.jpg}" alt="Image 14"></li>
+		<li class="image-list-item"><img th:src="@{static/images/メンター9.jpg}" alt="Image 15"></li>
+         <!--他の画像を追加する場合は同様に追加--> 
+    </ul>
+</body>
+</html>
