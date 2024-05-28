@@ -3,29 +3,26 @@
 <head>
 <title>オフィスカジュアル</title>
 <meta charset="utf-8" />
+<link rel="stylesheet" th:href="@{static/css/index.css}">　<!--cssに反映させるコード-->
 </head>
 <body>
 	
 	<header>
-		<div id="headerInner">
-		<div id="logo"><img th:src="@{1716858845604epb34ku4.png}" width="100px" alt="Hukuyoshi"></div>
-		</div>
+		<div id="headerInner"></div>
+		<div id="logo"><img th:src="@{static/1716858845604epb34ku4.png}" width="100px" >Fukuyoshi</div>
+		
 
 	</header>
 	
 	<main>
-		<h1 id="mainPhoto"><img th:src="@{main画像.jpg}" width="1000px"></h1>
+		<h1 id="mainPhoto"><img th:src="@{static/main画像.jpg}" width="1000px"></h1>
 		
 		<h2 th:text="${message}"></h2>
-			<a href="../templates/random.html" th:href="@{/random}"><img th:src="コーデ生成.jpg" width="300" alt="コード生成"></a>
-			<h2 th:text="${message}"></h2>
-		    <a href="../templates/body.html" th:href="@{/body}"><img th:src="先輩社員のコーデ.png" width="300" alt="先輩社員のコーデ"/></a>
 		
-		<!--<ul class="image-list">
-			<li class="image-list-item">
-		   <li><a href="../templates/form.html" th:href="@{/form}"><img th:src="コーデ生成.jpg" width="300" alt="コード生成"></a></li>
-		   <li><a href="../templates/body.html" th:href="@{/body}"><img th:src="先輩社員のコーデ.png" width="300" alt="先輩社員のコーデ"/></a></li>
-		</ul>-->
+		<ul class="main-url">
+			<li class="main-url-item"><a href="../templates/random.html" th:href="@{/random}"><img src="static/コーデ生成.jpg" width="500" alt="Image 11"></a></li>
+			<li class="main-url-item"><a href="../templates/body.html" th:href="@{/body}"><img src="static/先輩社員のコーデ.png" width="500" alt="Image 12"></a></li>
+	    </ul>
 	</main>	
 			
 <!--    <h1>オフィスカジュアル</h1>

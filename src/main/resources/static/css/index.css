@@ -1,0 +1,16 @@
+.main-url {
+    list-style-type: none; /* リストのマーカーを削除 */
+    text-align: center; /* リスト内の要素を中央寄せにする */
+    display: flex; /* 要素を横並びにする これは反映させたい親要素にかける*/
+   justify-content: space-around;/*幅を均等にする*/
+   height: 90vh;
+}
+
+h1 {
+    display: flex;
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    height: 90vh; /* 画像を画面全体の高さに合わせる場合 */
+    border:none;
+}
+
