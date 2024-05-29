@@ -1,9 +1,5 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    background: linear-gradient(to bottom, #fff5ee, #fff); /* グラデーションの開始色と終了色を指定 */
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -12,6 +8,10 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2em;
+    background-color: #ffb6c1; /* h1の背景色を別の色に変更 (薄いピンク色) */
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
 }
 
 .image-list {
@@ -25,7 +25,7 @@ h1 {
 }
 
 .image-list-item {
-    flex: 1 1 calc(33.333% - 20px); /* 3列にするための幅を設定 */
+    flex: 1 1 calc(20% - 20px); /* 5列にするための幅を設定 */
     box-sizing: border-box;
     padding: 10px;
     display: flex;

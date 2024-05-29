@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>服装一覧</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-<h1>服装一覧</h1>
+<h1>先輩社員のコーデ紹介</h1>
+<h2>カテゴリーを選択してください</h2>
 
 <div class="filters">
     <form action="/male" method="get">
-        <button type="submit" name="gender" value="male">男性</button>
+        <input type="image" src="/static/images/男性社員.png" alt="男性" name="gender" value="male">
     </form>
     <form action="/female" method="get">
-        <button type="submit" name="gender" value="female">女性</button>
+        <input type="image" src="/static/images/女性社員.png" alt="女性" name="gender" value="female">
     </form>
     <form action="/all" method="get">
-        <button type="submit">すべて表示</button>
+        <input type="image" src="/static/images/すべて表示.png" alt="すべて表示">
     </form>
 </div>
 
@@ -28,3 +29,59 @@
 </div>
 </body>
 </html>
+
+
+		<!--<ul class="image-list">
+		    画像リストアイテム 
+		   <li class="image-list-item"><img src="人事1.jpg" alt="Image 1"></li>
+		   		   <li class="image-list-item"><img src="人事2.jpg" alt="Image 2"></li>
+		   		   <li class="image-list-item"><img src="人事3.jpg" alt="Image 3"></li>
+		   		   <li class="image-list-item"><img src="人事4.jpg" alt="Image 4"></li>
+		   		   <li class="image-list-item"><img src="人事5.jpg" alt="Image 5"></li>
+		   		   <li class="image-list-item"><img src="人事6.jpg" alt="Image 6"></li>
+				   <li class="image-list-item"><img src="メンター1.jpg" alt="Image 7"></li>
+				   <li class="image-list-item"><img src="メンター2.jpg" alt="Image 8"></li>
+				   <li class="image-list-item"><img src="メンター3.jpg" alt="Image 9"></li>
+				   <li class="image-list-item"><img src="メンター4.jpg" alt="Image 10"></li>
+				   <li class="image-list-item"><img src="メンター5.jpg" alt="Image 11"></li>
+				   <li class="image-list-item"><img src="メンター6.jpg" alt="Image 12"></li>
+				   <li class="image-list-item"><img src="メンター7.jpg" alt="Image 13"></li>
+		    他の画像を追加する場合は同様に追加 
+		</ul>-->
+
+		
+		
+		
+		
+
+	<!--<section>
+	  <h1>先輩社員のコーディネート</h1>
+	  <ul id="code_list">
+	    <li id="code1">
+	      <div class="photo">
+	        <p class="title">コーデ1</p>
+	        <img th:src="@{sushi1.jpg}" alt="1">
+	      </div>
+	      <p class="text">キーワード</p>
+	    </li>
+	    <li id="code2">
+	      <div class="photo">
+	        <p class="title">コーデ2</p>
+	        <img th:src="@{sushi2.jpg}" alt="">
+	      </div>
+	      <p class="text">キーワード</p>
+	    </li>
+	    <li id="code3">
+	      <div class="photo">
+	        <p class="title">コーデ3</p>
+	        <img th:src="@{sushi3.jpg}" alt="">
+	      </div>
+	      <p class="text">キーワード</p>
+	    </li>
+	  </ul>
+	</section>
+	</body>
+	</html>-->
+
+
+

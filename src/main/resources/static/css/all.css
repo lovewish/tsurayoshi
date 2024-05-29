@@ -1,0 +1,43 @@
+body {
+    background-color: #f5fffa; /* 背景色を黄緑色に変更 */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    background-color: #90ee90; /* h1の背景色を緑に変更 */
+    color: white; /* h1のテキスト色を白に変更 */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.image-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px; /* 画像間のスペースを設定 */
+}
+
+.image-list-item {
+    flex: 1 1 calc(20% - 20px); /* 5列にするための幅を設定 */
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-list-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 150px; /* 画像を小さくする */
+}

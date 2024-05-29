@@ -1,27 +1,66 @@
-.image-list {
-    list-style-type: none; /* リストのマーカーを削除 */
-    text-align: center; /* リスト内の要素を中央寄せにする */
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.image-list li {
-    display: inline-block; /* 要素を横並びにする */
-    margin: 70px 50px 70px 50px; /* 画像間の間隔を調整 */
+/* Body styles */
+body {
+    font-family: 'Times New Roman', serif; /* 明朝フォントを指定 */
+    background-image: url('/static/images/花.png'); /* 背景画像を花.pngに設定 */
+    background-size: cover; /* 背景画像をカバーに設定 */
+    background-repeat: no-repeat; /* 背景画像を繰り返さない */
+    background-attachment: fixed; /* 背景画像を固定 */
 }
 
-.image-list img {
-    width: 250px; 
-    height: auto; /* アスペクト比を維持 */
+/* Header styles */
+h1 {
+    font-size: 3em; /* フォントサイズを2倍に */
+    color: white; /* h1を白色に */
+    margin-bottom: 20px;
+    margin-top: 100px; /* h1を下に下げる */
+    text-align: center; /* 中央寄せ */
 }
 
-ul {
-  column-count: 3;        /* 列数を3列に指定 */
-  border-style: groove;
-  background-color: antiquewhite;
+h2 {
+    color: white; /* h2を白色に */
+    margin-bottom: 20px;
+    margin-top: 50px; /* h2を下に下げる */
+    text-align: center; /* 中央寄せ */
 }
 
-h1{
-	text-align: center;
-	font-size: 40px;
-	background-color: aliceblue;
-	font-family: "游ゴシック";
+/* Filter styles */
+.filters {
+    margin-bottom: 20px;
+    margin-top: 20px; /* ボタンを下に下げる */
+    text-align: center; /* 中央寄せ */
+}
+
+.filters form {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.filters input[type="image"] {
+    width: 300px; /* 画像のサイズを5倍に調整 */
+    height: auto;
+}
+
+/* Gallery styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    margin: 10px;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
