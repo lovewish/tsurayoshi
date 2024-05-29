@@ -26,27 +26,6 @@ public class ChatController {
     public String sample2 (Model model){
         return "body";
     }
-	
-    @RequestMapping("/random-image")
-    @ResponseBody
-    public String getRandomImage() {
-        File directory = new File("static/image");
-        File[] files = directory.listFiles();
-        if (files != null && files.length > 0) {
-            Random random = new Random();
-            File randomFile = files[random.nextInt(files.length)];
-            return "/image/" + randomFile.getName();
-        }
-        return "random";
-    }
-	
-    
-    @RequestMapping("/random")
-    public String show1() {
-        return "random";
-    }
-    
-    
     
     @RequestMapping("/image")
     public String show() {
@@ -60,7 +39,7 @@ public class ChatController {
         try {
             if (!file.isEmpty()) {
                 // 保存先ディレクトリを作成
-                File directory = new File("static/image");
+                File directory = new File("src/main/resources/static/image");
                 if (!directory.exists()) {
                     directory.mkdirs();
                 }
@@ -85,6 +64,26 @@ public class ChatController {
         return "image";
         
     }
+    
+    @RequestMapping("/random")
+    public String show1() {
+        return "random";
+    }
+	
+    @RequestMapping("/random-image")
+    @ResponseBody
+    public String getRandomImage() {
+        File directory = new File("image");
+        File[] files = directory.listFiles();
+        if (files != null && files.length > 0) {
+            Random random = new Random();
+            File randomFile = files[random.nextInt(files.length)];
+            return "/image/" + randomFile.getName();
+        }
+        return "random";
+    }
+
+    
     //吉田の追加
     @GetMapping("/male")
     public String showMalePage() {
