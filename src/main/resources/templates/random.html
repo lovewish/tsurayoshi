@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>ランダム画像表示</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image Viewer</title>
 </head>
 <body>
-	
-	<!-- ボタンを追加 -->
-	<button onclick="showRandomImage()">ランダム表示ボタン</button>
-	
-	<!-- ランダムな画像を表示する場所 -->
-	<div id="randomImageContainer"></div>
-	
-	<script>
-	    // ランダムな画像を表示する関数
-	    function showRandomImage() {
-	        fetch("/random-image")
-	            .then(response => response.text())
-	            .then(imageUrl => {
-	                document.getElementById("randomImageContainer").innerHTML = `
-	                    <h2>Random Image</h2>
-	                    <img src="${imageUrl}" width="400" height="300">
-	                `;
-	            })
-	            .catch(error => console.error('Error fetching random image:', error));
-	    }
-	</script>
+    <h1>Random Image Viewer</h1>
+    <button onclick="showRandomImage()">Show Random Image</button>
+    <div id="randomImageContainer"></div>
+
+    <script>
+        function showRandomImage() {
+            fetch("/random-image")
+                .then(response => response.text())
+                .then(imageName => {
+                    const imageUrl = `/static/image/${imageName}`;
+                    document.getElementById("randomImageContainer").innerHTML = `
+                        <img src="${imageUrl}" alt="Random Image" style="max-width: 100%;">
+                    `;
+                })
+                .catch(error => console.error('Error fetching random image:', error));
+        }
+    </script>
 </body>
 </html>

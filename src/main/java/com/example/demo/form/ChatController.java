@@ -9,10 +9,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+
 
 @Controller
 public class ChatController {
@@ -27,7 +27,7 @@ public class ChatController {
         return "body";
     }
     
-    @RequestMapping("/image")
+    @GetMapping("/image")
     public String show() {
         return "image";
     }
@@ -65,24 +65,27 @@ public class ChatController {
         
     }
     
-    @RequestMapping("/random")
-    public String show1() {
-        return "random";
-    }
-	
-    @RequestMapping("/random-image")
-    @ResponseBody
-    public String getRandomImage() {
-        File directory = new File("image");
-        File[] files = directory.listFiles();
-        if (files != null && files.length > 0) {
-            Random random = new Random();
-            File randomFile = files[random.nextInt(files.length)];
-            return "/image/" + randomFile.getName();
-        }
+    @GetMapping("/random")
+    public String home() {
         return "random";
     }
 
+    private final String IMAGE_DIRECTORY = "src/main/resources/static/image";
+
+    @GetMapping("/random-image")
+    @ResponseBody
+    public String getRandomImage() {
+        File directory = new File(IMAGE_DIRECTORY);
+        File[] files = directory.listFiles((dir, name) -> name.endsWith(".jpg") || name.endsWith(".png"));
+        if (files != null && files.length > 0) {
+            Random random = new Random();
+            File randomFile = files[random.nextInt(files.length)];
+            return randomFile.getName();
+        }
+        return "";
+    }
+    
+    
     
     //吉田の追加
     @GetMapping("/male")
