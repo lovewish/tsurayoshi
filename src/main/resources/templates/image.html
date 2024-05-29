@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{static/css/image.css}">　<!--cssに反映させるコード-->
     <title>Upload Image</title>
 </head>
 <body>
-    <h1>Upload Image</h1>
+    <h1>コーデ追加</h1>
     <form action="/upload" method="post" enctype="multipart/form-data">
         <input type="file" name="file" accept="image/*">
-        <button type="submit">Upload</button>
+        <button type="submit">コーデを追加する</button>
     </form>
 </body>
 </html>
