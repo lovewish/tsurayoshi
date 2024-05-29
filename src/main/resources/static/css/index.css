@@ -1,16 +1,51 @@
-.main-url {
-    list-style-type: none; /* リストのマーカーを削除 */
-    text-align: center; /* リスト内の要素を中央寄せにする */
-    display: flex; /* 要素を横並びにする これは反映させたい親要素にかける*/
-   justify-content: space-around;/*幅を均等にする*/
+/*.main-url {
+    list-style-type: none;  リストのマーカーを削除 
+    text-align: center;  リスト内の要素を中央寄せにする 
+    display: flex;  要素を横並びにする これは反映させたい親要素にかける
+   justify-content: space-around;幅を均等にする
    height: 90vh;
+   max-width: 80px;
+}*/
+body{
+	background-color:aliceblue;
 }
+
+#logo {
+     margin-left: 50px; /* 左に10pxずらす */
+     }
+     
+header {
+    border-bottom: 3px solid #ccc; /* 下部に1pxの線を追加 */
+    padding-bottom: 10px; /* 下部の余白を追加 */
+    margin-bottom: 20px; /* 下部のマージンを追加 */
+    
+    }
 
 h1 {
     display: flex;
-    justify-content: center; /* 水平方向の中央揃え */
-    align-items: center; /* 垂直方向の中央揃え */
-    height: 90vh; /* 画像を画面全体の高さに合わせる場合 */
+    justify-content: center;  /*水平方向の中央揃え */
+    align-items: center;  /*垂直方向の中央揃え */
+    height: 90vh;  /*画像を画面全体の高さに合わせる場合 */
     border:none;
+    margin-top: 50px; 
+    background-color:aquamarine;  
 }
 
+.main-url {
+    list-style: none; /* リストのデフォルトのマーカーを削除 */
+    display: flex; /* リストアイテムを横並びに配置 */
+    justify-content: space-between; /* アイテムを均等に配置 */
+    margin-top: 50px; /* 上部に余白を追加して要素を下に移動 */
+    background-color: aquamarine;  
+}
+
+.main-url-item {
+    flex: 1px; /* アイテムの幅を均等にする */
+    text-align: center; /* アイテム内の要素を中央揃え */
+     margin-right: 50px; /* 左に10pxずらす */
+}
+
+.main-url-item img {
+    width: 370px; /* 画像の最大幅を指定 */
+    height: auto; /* 高さを自動調整 */
+}
