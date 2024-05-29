@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{static/css/imageall.css}">　<!--cssに反映させるコード-->
+    <title>All Images</title>
+</head>
+<body>
+    <h1>All Images</h1>
+    <div id="imageContainer"></div>
+
+    <script>
+        // 画像を取得して表示する関数
+        function displayImages() {
+            fetch("/all-images")
+                .then(response => response.json())
+                .then(imageNames => {
+                    const imageContainer = document.getElementById("imageContainer");
+                    imageNames.forEach(imageName => {
+                        const imageUrl = `static/image/${imageName}`;
+                        const img = document.createElement("img");
+                        img.src = imageUrl;
+                        img.alt = imageName;
+                        imageContainer.appendChild(img);
+                    });
+                })
+                .catch(error => console.error('Error fetching images:', error));
+        }
+
+        // ページ読み込み時に画像を表示
+        window.onload = displayImages;
+    </script>
+</body>
+</html>

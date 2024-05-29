@@ -3,6 +3,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import org.springframework.stereotype.Controller;
@@ -83,6 +85,28 @@ public class ChatController {
             return randomFile.getName();
         }
         return "";
+    }
+    
+    
+
+
+    @GetMapping("/imageall")
+    public String showAllImages() {
+        return "imageall";
+    }
+
+    @GetMapping("/all-images")
+    @ResponseBody
+    public List<String> getAllImages() {
+        List<String> imageNames = new ArrayList<>();
+        File directory = new File(IMAGE_DIRECTORY);
+        File[] files = directory.listFiles((dir, name) -> name.endsWith(".jpg") || name.endsWith(".png"));
+        if (files != null) {
+            for (File file : files) {
+                imageNames.add(file.getName());
+            }
+        }
+        return imageNames;
     }
     
     

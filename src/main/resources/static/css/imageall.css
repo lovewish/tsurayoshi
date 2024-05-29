@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#imageContainer img {
+    margin: 10px; /* 画像間のスペース */
+    max-width: 200px; /* 画像の最大幅 */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
