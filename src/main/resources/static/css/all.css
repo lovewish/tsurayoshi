@@ -1,5 +1,5 @@
 body {
-    background-color: #f5fffa; /* 背景色を黄緑色に変更 */
+    background-color: #f5fffa;
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -8,8 +8,8 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2em;
-    background-color: #90ee90; /* h1の背景色を緑に変更 */
-    color: white; /* h1のテキスト色を白に変更 */
+    background-color: #90ee90;
+    color: white;
     padding: 10px;
     border-radius: 5px;
 }
@@ -21,11 +21,11 @@ h1 {
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 20px; /* 画像間のスペースを設定 */
+    gap: 20px;
 }
 
 .image-list-item {
-    flex: 1 1 calc(20% - 20px); /* 5列にするための幅を設定 */
+    flex: 1 1 calc(20% - 20px);
     box-sizing: border-box;
     padding: 10px;
     display: flex;
@@ -39,5 +39,52 @@ h1 {
     display: block;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 150px; /* 画像を小さくする */
+    max-width: 150px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 60%;  /* 画像の幅を80%から60%に変更 */
+    max-width: 500px;  /* 最大幅を700pxから500pxに変更 */
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 500px;  /* 最大幅を700pxから500pxに変更 */
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
