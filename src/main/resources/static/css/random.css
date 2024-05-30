@@ -11,7 +11,7 @@ body {
     background-position: center center; /* 画像を中央に配置 */
     height: 100vh; /* ビューポートの高さを100%に設定 */
     width: 100vw; /* ビューポートの幅を100%に設定 */
-    overflow: hidden; /* ページのスクロールを無効にする */
+    
 }
 
 header {
