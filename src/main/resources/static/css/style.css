@@ -5,6 +5,17 @@
     padding: 0;
 }
 
+header {
+    border-bottom: 3px solid #ccc; /* 下部に1pxの線を追加 */
+    margin-bottom: 0; /* 下部のマージンを追加 */
+    z-index: 100;
+    background-color: #E8E8E8	;
+    position: fixed; /* ヘッダーをページの上部に固定する */
+    top: 0; /* 上部に配置する */
+    width: 100%; /* 幅をページの幅いっぱいに広げる */
+    z-index: 1000; /* 他の要素よりも手前に表示 */
+    }
+    
 /* Body styles */
 body {
     font-family: 'Times New Roman', serif; /* 明朝フォントを指定 */
@@ -17,9 +28,9 @@ body {
 /* Header styles */
 h1 {
     font-size: 3em; /* フォントサイズを2倍に */
+    margin-top: 130px; /* header からのマージンを追加 */
     color: white; /* h1を白色に */
     margin-bottom: 20px;
-    margin-top: 100px; /* h1を下に下げる */
     text-align: center; /* 中央寄せ */
 }
 

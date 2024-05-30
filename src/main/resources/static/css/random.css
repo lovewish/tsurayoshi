@@ -14,6 +14,17 @@ body {
     overflow: hidden; /* ページのスクロールを無効にする */
 }
 
+header {
+    border-bottom: 3px solid #ccc; /* 下部に1pxの線を追加 */
+    margin-bottom: 0; /* 下部のマージンを追加 */
+    z-index: 100;
+    background-color: #E8E8E8	;
+    position: fixed; /* ヘッダーをページの上部に固定する */
+    top: 0; /* 上部に配置する */
+    width: 100%; /* 幅をページの幅いっぱいに広げる */
+    z-index: 1000; /* 他の要素よりも手前に表示 */
+    }
+    
 .container {
     max-width: 500px;
     margin: 0 auto;
@@ -27,6 +38,7 @@ h1 {
     margin-bottom: 20px;
     background-color: #F0E68C;
     color:white;
+    margin-top: 60px; /* header からのマージンを追加 */
 }
 
 button {
