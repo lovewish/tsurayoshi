@@ -1,21 +1,32 @@
 /* random.css */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Times New Roman', serif; /* 明朝フォントを指定 */
+    background-color: #F0F0F0;
     margin: 0;
     padding: 0;
+    background-image: url('../images/服1.png'); /* 背景画像を設定 */
+    background-size: cover; /* 画像を全体に広げる */
+    background-repeat: no-repeat; /* 画像の繰り返しを止める */
+    background-position: center center; /* 画像を中央に配置 */
+    height: 100vh; /* ビューポートの高さを100%に設定 */
+    width: 100vw; /* ビューポートの幅を100%に設定 */
+    overflow: hidden; /* ページのスクロールを無効にする */
 }
 
 .container {
-    max-width: 800px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* 透明な白い背景 */
+    border-radius: 10px; /* ボックスの角を丸くする */
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    background-color: #F0E68C;
+    color:white;
 }
 
 button {
@@ -47,5 +58,32 @@ button:hover {
     margin-bottom: 20px;
 }
 
+.description-box {
+    background-color: rgba(255, 255, 255, 0.8); /* 透明な白い背景 */
+    border-radius: 10px; /* ボックスの角を丸くする */
+    padding: 10px;
+    margin-bottom: 20px;
+}
 
+.description-text {
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* 追加の説明文を乗せるボックスのスタイル */
+/*.description-box {*/
+/*    background-color: rgb(255, 255, 255);*/
+/*    border: 1px solid #ddd;*/
+/*    border-radius: 5px;*/
+/*    padding: 20px;*/
+/*    margin-top: 20px;*/
+/*     margin-bottom: 20px;  ボタンとの間に下部の余白を追加 */
+/*}*/
+
+/*.description-text {*/
+/*    font-size: 16px;*/
+/*    color: #333333;*/
+/*    line-height: 1.5;*/
+/*}*/
 

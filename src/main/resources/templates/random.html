@@ -8,10 +8,12 @@
     <title>Random Image Viewer</title>
 </head>
 <body>
-    <h1>今日のコーデ</h1>
-    <button onclick="showRandomImage()">コーデ生成スタート</button>
-    <div id="randomImageContainer"></div>
+	<h1>今日のコーデ</h1>
+    <div class="container"> <!-- ページ全体を囲むコンテナ -->
 
+        <button onclick="showRandomImage()">コーデ生成スタート</button>
+        <div id="randomImageContainer"></div>
+    </div>
     <script>
         function showRandomImage() {
             fetch("/random-image")
