@@ -8,17 +8,28 @@
 }*/
 body{
 	background-color:aliceblue;
+	overflow-x: hidden; /* 横スクロールを非表示にする */
+}
+
+#logo img {
+    display: block; /* 画像をブロック要素として扱う */
+    width: 10%; /* 幅を100%に設定 */
 }
 
 #logo {
-     margin-left: 50px; /* 左に10pxずらす */
+     margin-left: 30px; /* 左に10pxずらす */
      }
+     
      
 header {
     border-bottom: 3px solid #ccc; /* 下部に1pxの線を追加 */
-    padding-bottom: 10px; /* 下部の余白を追加 */
-    margin-bottom: 20px; /* 下部のマージンを追加 */
-    
+    margin-bottom: 0; /* 下部のマージンを追加 */
+    z-index: 100;
+    background-color: #e8e8e8	;
+    position: fixed; /* ヘッダーをページの上部に固定する */
+    top: 0; /* 上部に配置する */
+    width: 100%; /* 幅をページの幅いっぱいに広げる */
+    z-index: 1000; /* 他の要素よりも手前に表示 */
     }
 
 h1 {
@@ -27,25 +38,72 @@ h1 {
     align-items: center;  /*垂直方向の中央揃え */
     height: 90vh;  /*画像を画面全体の高さに合わせる場合 */
     border:none;
-    margin-top: 50px; 
-    background-color:aquamarine;  
+    margin-top: 80px; 
 }
+
+#mainPhoto img {
+    max-width: 100%; /* 幅を100%に設定 */
+    height: auto; /* 高さを自動調整 */
+    display: block; /* 画像をブロック要素として扱う */
+     position: relative; /* 相対位置指定 */
+}
+
 
 .main-url {
     list-style: none; /* リストのデフォルトのマーカーを削除 */
     display: flex; /* リストアイテムを横並びに配置 */
     justify-content: space-between; /* アイテムを均等に配置 */
-    margin-top: 50px; /* 上部に余白を追加して要素を下に移動 */
-    background-color: aquamarine;  
+    position: absolute; /* 絶対位置指定 */
+    bottom: 2px; /* 下部に配置 */
+    left: 0; /* 左端に配置 */
+    width: 100%; /* 幅を100%に設定 */
 }
 
 .main-url-item {
     flex: 1px; /* アイテムの幅を均等にする */
     text-align: center; /* アイテム内の要素を中央揃え */
      margin-right: 50px; /* 左に10pxずらす */
+}h1 {
+    display: flex;
+    justify-content: center;  /*水平方向の中央揃え */
+    align-items: center;  /*垂直方向の中央揃え */
+    height: 90vh;  /*画像を画面全体の高さに合わせる場合 */
+    border:none;
+    margin-top: 80px; 
 }
+
+#mainPhoto img {
+    max-width: 100%; /* 幅を100%に設定 */
+    height: auto; /* 高さを自動調整 */
+    display: block; /* 画像をブロック要素として扱う */
+     position: relative; /* 相対位置指定 */
+     overflow-x: hidden; /* 横スクロールを非表示にする */
+}
+
+
+.main-url {
+    list-style: none; /* リストのデフォルトのマーカーを削除 */
+    display: flex; /* リストアイテムを横並びに配置 */
+    justify-content: center; /* アイテムを均等に配置 */
+    position: absolute; /* 絶対位置指定 */
+    bottom: 2px; /* 下部に配置 */
+    left: 0; /* 左端に配置 */
+    width: 100%; /* 幅を100%に設定 */
+}
+
+.main-url-item {
+    flex: 0 0 auto; /* アイテムの幅を均等にする */
+    text-align: center; /* アイテム内の要素を中央揃え */
+    /*margin-right: 30px;  左に10pxずらす */
+}
+
 
 .main-url-item img {
     width: 370px; /* 画像の最大幅を指定 */
     height: auto; /* 高さを自動調整 */
+    margin-top: 20px; /* main要素の上部にマージンを追加 */
+}
+
+.main-url-item:first-child {
+    margin-left: 0; /* 最後のアイテムの右マージンを0に設定 */
 }
