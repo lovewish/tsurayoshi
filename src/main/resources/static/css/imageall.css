@@ -31,3 +31,17 @@ h1 {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+header {
+    border-bottom: 3px solid #ccc; /* 下部に1pxの線を追加 */
+    margin-bottom: 0; /* 下部のマージンを追加 */
+    z-index: 100;
+    background-color: #E8E8E8	;
+    position: fixed; /* ヘッダーをページの上部に固定する */
+    top: 0; /* 上部に配置する */
+    width: 100%; /* 幅をページの幅いっぱいに広げる */
+    z-index: 1000; /* 他の要素よりも手前に表示 */
+    }
+h1{
+margin-top: 80px; /* header からのマージンを追加 */
+}

@@ -19,6 +19,8 @@ h1 {
     margin-bottom: 20px;
     background-color: #f0e68c;
     color:white;
+    margin-top: 80px; /* header からのマージンを追加 */
+    
 }
 
 form {
@@ -50,6 +52,43 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-button[type="submit"]:hover {
+button{
+	    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none; /* リンクの下線を無効にする */
+}
+
+header {
+    border-bottom: 3px solid #ccc; /* 下部に1pxの線を追加 */
+    margin-bottom: 0; /* 下部のマージンを追加 */
+    z-index: 100;
+    background-color: #E8E8E8	;
+    position: fixed; /* ヘッダーをページの上部に固定する */
+    top: 0; /* 上部に配置する */
+    width: 100%; /* 幅をページの幅いっぱいに広げる */
+    z-index: 1000; /* 他の要素よりも手前に表示 */
+    }
+
+
+button:hover {
     background-color: #0056b3;
+}
+
+.container { 
+    width: 520px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* 透明な白い背景 */
+    border-radius: 10px; /* ボックスの角を丸くする */
+    margin-top: 20px;
 }

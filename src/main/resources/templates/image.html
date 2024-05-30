@@ -8,7 +8,13 @@
 	<link rel="stylesheet" th:href="@{static/css/image.css}"><!--cssに反映させるコード-->
     <title>Upload Image</title>
 </head>
+
 <body>
+	<header>
+		<div id="headerInner"></div>
+		<div id="logo"><a href="http://localhost:8080"><img th:src="@{static/rogo.png}" width="150px" ></a></div>
+	</header>
+	
     <h1>コーデ写真を追加</h1>
     <form action="/upload" method="post" enctype="multipart/form-data">
         <input type="file" name="file" accept="image/*">
@@ -17,7 +23,7 @@
 	
 	<div class="container"> <!-- ページ全体を囲むコンテナ -->
 	
-		<a href="imageall"><button>すべてのコーデ一覧へ</button></a>
+		<a href="http://localhost:8080/imageall" ><button>コーデ一覧へ</button></a>
 
 	</div>
 	
